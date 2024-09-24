@@ -1,0 +1,166 @@
+.feed-container {
+  min-height: 100vh;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.post-container {
+  width: 90%;
+  max-width: 500px;
+  border: 1px solid #ddd;
+  margin: 20px 0;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.username {
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.likes-count,
+.post-caption,
+.comments-section,
+.post-time {
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.comment {
+  margin: 5px 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  word-wrap: break-word;
+}
+
+.comment:last-child {
+  border-bottom: none;
+}
+
+.likes-count {
+  font-weight: bold;
+}
+
+.post-caption .username {
+  margin-right: 5px;
+}
+  .comments-section {
+    display: none;
+  }
+
+  .comments-section.show {
+    display: block;
+  }
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}.post-time {
+  font-size: 12px;
+  color: gray;
+}
+
+.comments-section {
+  display: none;
+  padding: 10px;
+}
+
+.comments-section.show {
+  display: block;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .post-container {
+    width: 95%;
+    margin: 10px 0;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .post-actions {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-container {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .avatar {
+    width: 25px;
+    height: 25px;
+  }
+
+  .post-actions {
+    padding: 5px;
+  }
+
+  .likes-count,
+  .post-caption,
+  .comments-section,
+  .post-time {
+    padding: 5px;
+  }
+}
+
+.action-btn mat-icon {
+  transition: color 0.3s ease;
+}
+
+.action-btn mat-icon[style*="color: red"] {
+  color: red;
+}

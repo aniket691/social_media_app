@@ -1,0 +1,56 @@
+/* Basic styling for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #6200ea; /* Purple background */
+    color: white;
+    width: 100vw; /* Ensure the navbar spans the entire width of the screen */
+    box-sizing: border-box; /* Include padding and borders in the element's width and height */
+    position: fixed; /* Keeps the navbar fixed at the top */
+    top: 0;
+    left: 0;
+  }
+  
+  /* Branding or app name styling */
+  .app-name {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Right-side container */
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Styling for the login link */
+  .nav-link {
+    text-decoration: none;
+    color: white; /* Default link color */
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for the login link */
+  .nav-link:hover {
+    color: #ff4081; /* Color on hover (pinkish) */
+  }
+  
+  /* Make the navbar responsive */
+  @media (max-width: 768px) {
+    .app-name {
+      font-size: 20px; /* Smaller font size on smaller screens */
+    }
+  
+    .nav-link {
+      font-size: 16px;
+      padding: 6px 12px;
+    }
+  }
+  

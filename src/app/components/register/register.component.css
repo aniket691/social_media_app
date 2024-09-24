@@ -1,0 +1,25 @@
+.register-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Set a max width for the form */
+    margin: auto; /* Center the form horizontally */
+  }
+  
+  .mat-form-field {
+    margin-bottom: 16px; /* Add space between form fields */
+  }
+
+  .banner {
+    background-color: purple;  /* Purple background for error */
+    color: white;              /* White text */
+    padding: 10px;
+    margin: 50px auto;         /* Center the banner horizontally */
+    border-radius: 5px;
+    text-align: center;
+    width: 650%;                /* Set a fixed width (adjust as needed) */
+    max-width: 500px;          /* Ensure it doesn't stretch too much on larger screens */
+    min-width: 200px;          /* Ensure it doesn't become too small on smaller screens */
+  }
+  
+  
+  

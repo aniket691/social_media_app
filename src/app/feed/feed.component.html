@@ -1,0 +1,53 @@
+<div class="feed-container" cdkScrollable (cdkScroll)="onScroll()">
+  <div *ngFor="let post of posts" class="post-container">
+    <!-- User info -->
+    <div class="user-info">
+      <img [src]="post.user.avatar" alt="avatar" class="avatar" />
+      <span class="username">{{ post.user.name }}</span>
+    </div>
+
+    <!-- Post image -->
+    <div class="post-image">
+      <img [src]="post.imageUrl" alt="post image" />
+    </div>
+
+    <!-- Like, comment, share buttons -->
+    <div class="post-actions">
+      <button class="action-btn" (click)="toggleLike(post.id)">
+        <mat-icon [ngStyle]="{'color': likedPosts[post.id] ? 'red' : ''}">
+          {{ likedPosts[post.id] ? 'favorite' : 'favorite_border' }}
+        </mat-icon>
+      </button>
+      <button class="action-btn" (click)="toggleComments(post.id)">
+        <mat-icon>chat_bubble_outline</mat-icon>
+      </button>
+      <button class="action-btn">
+        <mat-icon>send</mat-icon>
+      </button>
+    </div>
+
+    <!-- Likes count -->
+    <div class="likes-count">
+      {{ post.likes }} likes
+    </div>
+
+    <!-- Post caption -->
+    <div class="post-caption">
+      <span class="username">{{ post.user.name }}</span>
+      <span>{{ post.caption }}</span>
+    </div>
+
+    <!-- Comments section -->
+    <div class="comments-section" [class.show]="visibleComments[post.id]">
+      <div *ngFor="let comment of post.comments" class="comment">
+        <span class="username">{{ comment.user }}</span>
+        <span>{{ comment.text }}</span>
+      </div>
+    </div>
+
+    <!-- Time posted -->
+    <div class="post-time">
+      {{ post.time }}
+    </div>
+  </div>  
+</div>
